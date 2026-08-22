@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12161c">
+  <meta name="description" content="Cheap Chess — a WebAX chess application: fixed-pool depth search, center-control scoring, and an exception learner. SPA + PWA.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="./icons/icon-180.png">
+  <title>Cheap Chess — a WebAX app</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>♞ Cheap Chess</h1>
+    <p class="tagline">
+      A WebAX application · fixed-size search pool · center-control scoring ·
+      per-difficulty exception learning · UCI-ready
+    </p>
+  </header>
+
+  <main>
+    <cheap-chess difficulty="4" color="white" learning="true"></cheap-chess>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Difficulty = search depth. Normal play has no time limit; the UCI adapter
+      (<code>node develop/cheap-chess-uci.mjs</code>) adds tournament time controls.
+      Install as an app: Chrome / Edge → Install.
+    </p>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

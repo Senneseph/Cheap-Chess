@@ -1,0 +1,15 @@
+{
+  "name": "cheap-chess",
+  "version": "0.1.0",
+  "description": "A WebAX chess application: pool-based depth search, center-control scoring, and a per-difficulty exception learner. SPA + PWA, no build step.",
+  "type": "module",
+  "main": "app/src/uci.js",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "serve": "python3 -m http.server 8080 --directory ..",
+    "uci": "node develop/cheap-chess-uci.mjs",
+    "icons": "python3 develop/tools/make-icons.py"
+  },
+  "keywords": ["webax", "chess", "pwa", "engine", "uci"],
+  "license": "MIT"
+}

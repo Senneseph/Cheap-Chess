@@ -1,0 +1,36 @@
+{
+  "name": "Cheap Chess — WebAX",
+  "short_name": "Chess",
+  "description": "A WebAX chess application: fixed-pool depth search, center-control scoring, per-difficulty exception learning. SPA + PWA.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0e1217",
+  "theme_color": "#0b6bcb",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "webax": {
+    "package_id": "cheap-chess",
+    "version": "0.1.0",
+    "publisher": "local",
+    "permissions": ["storage"],
+    "provides": [{ "intent": "play", "type": "game", "formats": ["chess"] }],
+    "requires": [],
+    "services": [],
+    "distribution": {},
+    "integration": {
+      "comlink": {
+        "expose": [
+          "chess.engine.search",
+          "chess.engine.evaluate",
+          "chess.game.new",
+          "chess.learner.exceptions"
+        ],
+        "connect": ["storage-service"]
+      }
+    }
+  }
+}

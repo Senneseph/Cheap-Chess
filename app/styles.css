@@ -1,0 +1,33 @@
+/* Cheap Chess — page-level styles (the component styles itself via shadow DOM). */
+:root {
+  color-scheme: dark;
+  --cc-bg: #0e1217;
+  --cc-text: #d7e0ea;
+  --cc-dim: #8b98a8;
+  --cc-accent: #0b6bcb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(1200px 800px at 20% -10%, #16212e 0%, var(--cc-bg) 60%);
+  color: var(--cc-text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 48px;
+}
+
+.app-header { text-align: center; margin-bottom: 20px; }
+.app-header h1 { margin: 0 0 6px; font-size: 2rem; letter-spacing: .02em; }
+.app-header .tagline { margin: 0; color: var(--cc-dim); font-size: 13px; }
+
+main { width: 100%; display: flex; justify-content: center; }
+
+cheap-chess { max-width: 900px; width: 100%; }
+
+.app-footer { margin-top: 28px; text-align: center; color: var(--cc-dim); font-size: 12px; max-width: 640px; line-height: 1.6; }
+.app-footer code { background: #1a212b; padding: 1px 5px; border-radius: 4px; }

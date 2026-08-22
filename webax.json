@@ -1,0 +1,28 @@
+{
+  "build": {
+    "output_dir": "app",
+    "bundle": false,
+    "minify": false
+  },
+  "development": {
+    "server": {
+      "port": 8080,
+      "https": false
+    }
+  },
+  "distribution": {
+    "channels": ["stable", "beta", "dev"],
+    "auto_update": true
+  },
+  "integration": {
+    "comlink": {
+      "expose": [
+        "chess.engine.search",
+        "chess.engine.evaluate",
+        "chess.game.new",
+        "chess.learner.exceptions"
+      ],
+      "connect": ["storage-service"]
+    }
+  }
+}
